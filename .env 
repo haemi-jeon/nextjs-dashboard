@@ -8,5 +8,5 @@ POSTGRES_PASSWORD="foIs8cDru0hQ"
 POSTGRES_DATABASE="verceldb"
 
 # `openssl rand -base64 32`
-AUTH_SECRET=
+AUTH_SECRET="wiADhcJ5fNtL71ES+43iSgKJ9Bc50gMc5lOxv4PTwrw="
 AUTH_URL=http://localhost:3000/api/auth
