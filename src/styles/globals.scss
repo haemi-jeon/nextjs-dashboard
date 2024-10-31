@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.layout {
+  @apply overflow-clip relative w-screen h-screen;
+}
+
+/* navbar */
+.navbar {
+  @apply z-[600] fixed w-[240px] h-screen;
+
+  &__list {
+    @apply flex flex-col h-screen py-2 mt-[56px] bg-gray-700 shadow-md;
+
+    &-item {
+      @apply flex h-[48px] px-6;
+
+      a {
+        @apply flex items-center gap-3 text-white cursor-pointer;
+
+        &:hover {
+          @apply text-cyan-500;
+        }
+      }
+    }
+  }
+}
+
+.navbar__button {
+  @apply hidden;
+}
+
+.navbar-mobile {
+  @apply hidden;
+}
+
+/* topbar */
+.topbar {
+  @apply flex items-center z-[600] fixed w-full h-[56px];
+
+  &__logo {
+    @apply flex justify-center items-center w-[240px] h-full px-5 bg-gray-700;
+
+    a {
+      @apply flex text-white text-lg font-bold cursor-pointer;
+
+      > * {
+        @apply flex-1;
+      }
+    }
+  }
+
+  &__tool {
+    @apply flex-1 flex justify-between items-center h-[56px] px-6 bg-white shadow-sm;
+
+    .title {
+      @apply text-black font-bold;
+    }
+
+    .tool__menu {
+      @apply flex gap-6;
+
+      &-item {
+        @apply flex justify-center items-center gap-2 px-2 text-black;
+
+        .avatar {
+          @apply flex justify-center items-center w-8 h-8 rounded-full bg-gray-300 text-gray-700;
+        }
+
+        button {
+          svg {
+            @apply w-6 h-6;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* main */
+main {
+  @apply z-[300] relative min-h-screen pt-[56px] pl-[240px];
+
+  .page {
+    min-height: calc(100vh - 56px);
+    @apply p-6 bg-neutral-50;
+  }
+}
